@@ -1,0 +1,20 @@
+<head>
+  <title>simple-sum</title>
+</head>
+
+<body>
+  <h1>Simple Sum</h1>
+  
+  {{> sum}}
+  
+</body>
+
+<template name="sum">
+	<form>
+		<input type="number" name="a" placeholder="a" />
+		<input type="number" name="b" placeholder="b" />
+		<input type="submit" value="Sum" />
+		<p>Sum: {{result}}</p>
+	</form>
+</template>
+
