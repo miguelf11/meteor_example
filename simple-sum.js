@@ -27,9 +27,10 @@ if (Meteor.isServer) {
 			var command = 'pwd';
 		    Fiber = Npm.require('fibers');
 		    exec(command, function(error, stdout, stderr){
-			    console.log(stdout);
+			    //console.log(stdout);
 			    Fiber(function() {
 		        	ServerSession.set('path', pwd = stdout.split('.meteor')[0]);
+		        	console.log('Path: ' + ServerSession.get('path'));
 		        }).run();
 		    });
 		    		    
